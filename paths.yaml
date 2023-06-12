@@ -1,0 +1,7 @@
+paths:
+  /user:
+    get:
+      summary: Get user
+      responses:
+        '200':
+          description: Successful response

@@ -157,3 +157,43 @@ paths:
                     type: "string"
                   lastName:
                     type: "string"              
+  /user/updateUsers:
+    put:
+      summary: "update user"
+      description: "update user with id"
+      consumes:
+        - "application/json"
+      parameters:
+        - in: "query"
+          name: "id"
+          type: "integer"
+          required: "true"
+          schema: 
+            type: "integer"
+        - in: body
+          name: abc
+          description: "User object that needs to be created"
+          required: true
+          schema:
+            type: "object"
+            properties:
+                firstName:
+                  type: "string"
+                lastName:
+                  type: "string"
+      produces:
+        - "application/json"
+      responses: 
+        200:
+          description: "Successful deleted user"
+          scheme: 
+            type: "array"
+            items:
+                type: "object"
+                properties:
+                  id:
+                    type: "integer"
+                  firstName:
+                    type: "string"
+                  lastName:
+                    type: "string"              
